@@ -35,3 +35,10 @@
 # Serial Communication
 #         ↓
 # Computer Monitoring
+
+# CIRCUIT PROTOTYPE: 
+![Breadboard Circuit](Images/IMG_1647.jpeg)
+
+![Breadboard Circuit](Images/IMG_1648.jpeg)
+
+![Breadboard Circuit](Images/IMG_1649.jpeg)
