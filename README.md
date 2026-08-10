@@ -159,6 +159,14 @@
 # The longer-term aim is to build upon the foundations developed in this project through progressively more advanced embedded, mechatronic, robotic, and control-system projects involving PWM, motors, position sensing, autonomous decision-making, and closed-loop control.
 
 # FUTURE DEVELOPMENT 01 — PYTHON REAL-TIME DASHBOARD
+<img width="1021" height="682" alt="Screenshot 2026-08-09 184634" src="https://github.com/user-attachments/assets/eacafe34-f8e9-488c-ba5d-2f205b62cd78" />
+
+<img width="797" height="687" alt="Screenshot 2026-08-09 190036" src="https://github.com/user-attachments/assets/e173bb51-2669-4c1a-8ae2-a1b1795696dc" />
+
+<img width="798" height="685" alt="Screenshot 2026-08-09 211840" src="https://github.com/user-attachments/assets/191eaf1b-4ac1-48e5-942c-bee7621756f6" />
+
+<img width="790" height="693" alt="Screenshot 2026-08-10 152235" src="https://github.com/user-attachments/assets/a94fbdd2-d06e-4941-a5f4-25b7f569f01d" />
+
 # The project was extended by developing a Python-based dashboard to receive, process and visualise temperature data from the Arduino in real time. The Arduino transmits temperature readings through serial communication, which Python receives as incoming byte data and converts into usable numerical values. To prevent the Python program from processing a backlog of outdated readings, in_waiting was used to determine how much data was currently stored in the serial buffer. The program can then prioritise the most recent readings rather than continuously processing stale data that has accumulated in the buffer.
 # A moving window was also implemented to maintain a fixed number of recent temperature values. As each new temperature is received, it is appended to the list while the oldest value is removed using pop(0). This prevents the dataset from growing indefinitely while ensuring that the graph focuses on the latest temperature behaviour. The dashboard also includes a live temperature graph and a status indicator that categorises the current reading as Cold, Warm or Hot.
 # This development significantly improved the responsiveness of the visualisation by reducing the effect of buffered, outdated readings and allowing the dashboard to represent the current temperature more accurately.
