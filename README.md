@@ -164,5 +164,6 @@
 # This development significantly improved the responsiveness of the visualisation by reducing the effect of buffered, outdated readings and allowing the dashboard to represent the current temperature more accurately.
 
 # FUTURE DEVELOPMENT 02 - CIRCUIT SCHEEMATIC
-![Python Dashboard](images/Screenshot%202026-08-10%230157.png)
+<img width="1442" height="848" alt="Screenshot 2026-08-10 230157" src="https://github.com/user-attachments/assets/6be03c6b-9733-4db2-9656-921a556e882f" />
+
 # The completed physical circuit was recreated as a formal engineering schematic using KiCad. The schematic documents the connections between the Arduino Uno R3, Grove temperature sensor, three LED indicators and 220 Ω resistors, including the signal, power and ground connections. Creating the schematic provides a clear and reproducible representation of the hardware design and demonstrates how the physical prototype can be translated into formal engineering documentation.
