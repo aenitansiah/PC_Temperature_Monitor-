@@ -159,10 +159,10 @@
 # The longer-term aim is to build upon the foundations developed in this project through progressively more advanced embedded, mechatronic, robotic, and control-system projects involving PWM, motors, position sensing, autonomous decision-making, and closed-loop control.
 
 # FUTURE DEVELOPMENT 01 — PYTHON REAL-TIME DASHBOARD
-![Python Dashboard](images/Screenshot%202026-08-10%20230157.png)
 # The project was extended by developing a Python-based dashboard to receive, process and visualise temperature data from the Arduino in real time. The Arduino transmits temperature readings through serial communication, which Python receives as incoming byte data and converts into usable numerical values. To prevent the Python program from processing a backlog of outdated readings, in_waiting was used to determine how much data was currently stored in the serial buffer. The program can then prioritise the most recent readings rather than continuously processing stale data that has accumulated in the buffer.
 # A moving window was also implemented to maintain a fixed number of recent temperature values. As each new temperature is received, it is appended to the list while the oldest value is removed using pop(0). This prevents the dataset from growing indefinitely while ensuring that the graph focuses on the latest temperature behaviour. The dashboard also includes a live temperature graph and a status indicator that categorises the current reading as Cold, Warm or Hot.
 # This development significantly improved the responsiveness of the visualisation by reducing the effect of buffered, outdated readings and allowing the dashboard to represent the current temperature more accurately.
 
 # FUTURE DEVELOPMENT 02 - CIRCUIT SCHEEMATIC
+![Python Dashboard](images/Screenshot%202026-08-10%20230157.png)
 # The completed physical circuit was recreated as a formal engineering schematic using KiCad. The schematic documents the connections between the Arduino Uno R3, Grove temperature sensor, three LED indicators and 220 Ω resistors, including the signal, power and ground connections. Creating the schematic provides a clear and reproducible representation of the hardware design and demonstrates how the physical prototype can be translated into formal engineering documentation.
