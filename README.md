@@ -7,19 +7,19 @@ Temperature data is also transmitted to a connected computer using serial commun
 The project was developed as part of my self-directed summer engineering portfolio to strengthen my practical understanding of electronics, embedded programming, circuit design, mathematical modelling, debugging, testing, and mechatronic system integration.
 
 # OBJECTIVES: 
-Develop foundational understanding of embedded systems.
-Learn how analog temperature sensors interface with microcontrollers.
-Understand breadboard circuit design and current flow.
-Implement LED-based temperature indication logic
-Explore serial communication between Arduino and a computer 
-Build confidence in independent electronics prototyping 
-Document the engineering process using GitHub
-FEATURES : 
- Real-time temperature sensing 
- LED-based temperature status indication
- Serial monitor temperature output 
- Breadboard-based prototype circuit
- Expandable architecture for future python dashboard integration 
+- Develop foundational understanding of embedded systems.
+- Learn how analog temperature sensors interface with microcontrollers.
+- Understand breadboard circuit design and current flow.
+- Implement LED-based temperature indication logic
+- Explore serial communication between Arduino and a computer 
+- Build confidence in independent electronics prototyping 
+- Document the engineering process using GitHub
+# FEATURES : 
+- Real-time temperature sensing 
+- LED-based temperature status indication
+- Serial monitor temperature output 
+- Breadboard-based prototype circuit
+- Expandable architecture for future python dashboard integration 
 
 # HARDWARE & CIRCUIT DESIGN:
 The system was developed using a KONO 38 (Arduino Uno-compatible board), Grove Bae Shield, Grove Temperature Sensor, three LEDs, three resistors, a breadboard and jump wires.
