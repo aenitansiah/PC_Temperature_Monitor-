@@ -183,15 +183,15 @@ The longer-term aim is to build upon the foundations developed in this project t
 # FUTURE DEVELOPMENT 01 — PYTHON REAL-TIME DASHBOARD
 <img width="1021" height="682" alt="Screenshot 2026-08-09 184634" src="https://github.com/user-attachments/assets/eacafe34-f8e9-488c-ba5d-2f205b62cd78" />
 
-Phase 1 of debugging: All data trying to fit on the dashboard
+# Phase 1 of debugging: All data trying to fit on the dashboard
 
 <img width="797" height="687" alt="Screenshot 2026-08-09 190036" src="https://github.com/user-attachments/assets/e173bb51-2669-4c1a-8ae2-a1b1795696dc" />
 
-Phase 2 of debugging: 
+Phase 2 of debugging: The range for the temperature was too zomoed in 
 
 <img width="798" height="685" alt="Screenshot 2026-08-09 211840" src="https://github.com/user-attachments/assets/191eaf1b-4ac1-48e5-942c-bee7621756f6" />
 
-Phase 3 of debugging:
+Phase 3 of debugging: Implemented the moving window
 
 <img width="790" height="693" alt="Screenshot 2026-08-10 152235" src="https://github.com/user-attachments/assets/a94fbdd2-d06e-4941-a5f4-25b7f569f01d" />
 
