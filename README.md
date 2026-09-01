@@ -183,7 +183,7 @@ The longer-term aim is to build upon the foundations developed in this project t
 # FUTURE DEVELOPMENT 01 — PYTHON REAL-TIME DASHBOARD
 <img width="1021" height="682" alt="Screenshot 2026-08-09 184634" src="https://github.com/user-attachments/assets/eacafe34-f8e9-488c-ba5d-2f205b62cd78" />
 
-# Phase 1 of debugging: All data trying to fit on the dashboard
+Phase 1 of debugging: All data trying to fit on the dashboard
 
 <img width="797" height="687" alt="Screenshot 2026-08-09 190036" src="https://github.com/user-attachments/assets/e173bb51-2669-4c1a-8ae2-a1b1795696dc" />
 
