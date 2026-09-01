@@ -45,6 +45,7 @@ The ADC reading is then processed within the embedded program to determine the s
 The resulting temperature is converted into degrees Celsius and passed to the embedded state-control logic.
 The Arduino then determines whether the system should be operating in the cold, warm, or hot state and activities the corresponding LED. The calculated temperature is also transmitted through serial communication to a connected computer.
 The overall system can therefore be represented as:
+
 Grove Temperature Sensor
       ↓
 Analogue Signal
