@@ -33,7 +33,7 @@ The circuit was initially developed using a simpler LED configuration to verify 
 
 This initial prototype was created due to my limited access to resources at the time, however was improved and made more efficient when I got an Arduino starter kit.
 # FINAL PROTOTYPE:
-![Final Updated Circuit](Final_Updated_Circuit.png)
+![Final Updated Circuit](Images/Final_Updated_Circuit.png)
 
 The final prototype incorporates the Grove Temperature Sensor and three LED indicators representing the cold, warm, and hot operating states.
 A formal electrical schematic of the final circuit will be developed in KiCad as a future stage of the project
