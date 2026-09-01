@@ -7,9 +7,9 @@ Temperature data is also transmitted to a connected computer using serial commun
 The project was developed as part of my self-directed summer engineering portfolio to strengthen my practical understanding of electronics, embedded programming, circuit design, mathematical modelling, debugging, testing, and mechatronic system integration.
 
 # OBJECTIVES: 
-Develop foundational understanding of embedded systems 
-Learn how analog temperature sensors interface with microcontrollers
-Understand breadboard circuit design and current flow 
+Develop foundational understanding of embedded systems.
+Learn how analog temperature sensors interface with microcontrollers.
+Understand breadboard circuit design and current flow.
 Implement LED-based temperature indication logic
 Explore serial communication between Arduino and a computer 
 Build confidence in independent electronics prototyping 
