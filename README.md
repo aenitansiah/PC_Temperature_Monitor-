@@ -44,7 +44,7 @@ This analogue signal is received by the Arduino through the input and converted 
 The ADC reading is then processed within the embedded program to determine the sensor voltage and thermistor resistance. The calculated resistance is used with the known reference values of the thermistor to determine the temperature using the Beta equation. 
 The resulting temperature is converted into degrees Celsius and passed to the embedded state-control logic.
 The Arduino then determines whether the system should be operating in the cold, warm, or hot state and activities the corresponding LED. The calculated temperature is also transmitted through serial communication to a connected computer.
-The overall system can therefore be represented as:
+The overall system can therefore be represented as
 
 Grove Temperature Sensor
       ↓
@@ -70,6 +70,8 @@ LED    LED    LED
 Serial Communication
       ↓
 Computer
+
+
 
 # TEMPERATURE MEASUREMENT & MATHEMATICAL MODEL
 The Grove Temperature Sensor uses a thermistor to measure ambient temperature. A thermistor is a temperature-dependent resistor, meaning that its electrical resistance changes as the temperature changes. For this sensor, the resistance increases as the temperature decreases.
