@@ -1,6 +1,8 @@
 # PC_Temperature_Monitor-
-This project is an Arduino-based temperature monitoring and visualisation system developed to explore the fundamentals of embedded systems, sensor integration, analogue signal processing, embedded programming, and hardware-software communication.
+Developed a PC temperature monitoring system using an Arduino and a thermistor temperature sensor, with Python-based data processing and LED indicators to monitor and communicate temperature states.
+
 # PROJECT OVERVIEW: 
+This project is an Arduino-based temperature monitoring and visualisation system developed to explore the fundamentals of embedded systems, sensor integration, analogue signal processing, embedded programming, and hardware-software communication.
 The system uses a Grove Temperature Sensor connected to an Arduino to measure ambient temperature in real time. The analogue output from the sensor is read by the Arduino and processed to determine the temperature in degree Celsius. This involves converting the analog-to-digital converter (ADC) reading into a voltage, using the voltage to determine the thermistor resistance through the potential divider relationship, and then applying the thermistor Beta equation to calculate temperature. 
 Three LEDs provide real-time visual feedback of the measured temperature, representing cold, warm, and hot operating states. State-based logic and hysteresis were implemented to improve the robustness of the system and reduce unwanted switching around temperature thresholds. 
 Temperature data is also transmitted to a connected computer using serial communication, providing the foundation for future Python-based visualisation and data logging. 
@@ -44,34 +46,32 @@ This analogue signal is received by the Arduino through the input and converted 
 The ADC reading is then processed within the embedded program to determine the sensor voltage and thermistor resistance. The calculated resistance is used with the known reference values of the thermistor to determine the temperature using the Beta equation. 
 The resulting temperature is converted into degrees Celsius and passed to the embedded state-control logic.
 The Arduino then determines whether the system should be operating in the cold, warm, or hot state and activities the corresponding LED. The calculated temperature is also transmitted through serial communication to a connected computer.
-The overall system can therefore be represented as
+The overall system can therefore be represented as:
 
-Grove Temperature Sensor
-      ↓
-Analogue Signal
-      ↓
-Arduino A0
-      ↓
-ADC Reading
-      ↓
-Voltage Calculation
-      ↓
-Resistance Calculation
-      ↓
-Beta Equation
-      ↓
-Temperature (°C)
-      ↓
-State Logic
-    ↙   ↓   ↘
-Blue  Yellow  Red
-LED    LED    LED
-      ↓
-Serial Communication
-      ↓
-Computer
-
-
+- Grove Temperature Sensor
+-       ↓
+- Analogue Signal
+-       ↓
+- Arduino A0
+-       ↓
+- ADC Reading
+-       ↓
+- Voltage Calculation
+-       ↓
+- Resistance Calculation
+-       ↓
+- Beta Equation
+-       ↓
+- Temperature (°C)
+-       ↓
+- State Logic
+-     ↙   ↓   ↘
+- Blue  Yellow  Red
+- LED    LED    LED
+-       ↓
+- Serial Communication
+-       ↓
+- Computer
 
 # TEMPERATURE MEASUREMENT & MATHEMATICAL MODEL
 The Grove Temperature Sensor uses a thermistor to measure ambient temperature. A thermistor is a temperature-dependent resistor, meaning that its electrical resistance changes as the temperature changes. For this sensor, the resistance increases as the temperature decreases.
@@ -82,17 +82,18 @@ Once the thermistor resistance has been calculated, the Beta equation can be use
 where T represents the thermistor temperature in Kelvin, T₀ is the reference temperature, R is the calculated thermistor resistance, R₀ is the thermistor resistance at the reference temperature, and B is the Beta constant for the thermistor.
 The calculated temperature is initially obtained in Kelvin and is then converted into degrees Celsius before being displayed through the Serial Monitor and used by the temperature-state logic.
 The measurement process can therefore be summarised as:
-ADC Reading
-      ↓
- Sensor Voltage
-      ↓
- Thermistor Resistance
-      ↓
- Beta Equation
-      ↓
- Temperature in Kelvin
-      ↓
-Temperature in °C
+- ADC Reading
+-       ↓
+-  Sensor Voltage
+-       ↓
+-  Thermistor Resistance
+-       ↓
+-  Beta Equation
+-       ↓
+-  Temperature in Kelvin
+-       ↓
+- Temperature in °C
+- 
 This process allowed the project to explore the relationship between a physical environmental quantity, an electrical property, an analogue voltage, and a digital measurement.
 
 # EMBEDDED SOFTWARE & STATE LOGIC 
@@ -102,19 +103,20 @@ Serial.begin() establishes serial communication with the connected computer, whi
 The LED control is implemented using digital outputs and digitalWrite(). The system uses three states: cold, warm, and hot. Each state corresponds to a different LED.
 Rather than treating every temperature reading as an entirely independent decision, the program stores the current state using a state variable. This allows the system to consider both the current temperature and the state that the system was previously operating in.
 The basic operating logic is:
-Read temperature
-      ↓
-Determine current state
-      ↓
-Check whether transition threshold has been reached
-      ↓
-Update state if required
-      ↓
-Activate corresponding LED
-      ↓
-Transmit temperature through Serial
-      ↓
-Repeat
+- Read temperature
+-       ↓
+- Determine current state
+-       ↓
+- Check whether transition threshold has been reached
+-       ↓
+- Update state if required
+-       ↓
+- Activate corresponding LED
+-       ↓
+- Transmit temperature through Serial
+-       ↓
+-    Repeat
+  
 The system therefore behaves as a simple embedded state machine rather than simply switching LEDs based on one set of temperature conditions.
 
 # HYSTERESIS & SYSTEM IMPROVEMENT:
@@ -123,10 +125,12 @@ This occurred because the temperature sensor continuously produces changing meas
 To improve the robustness of the system, hysteresis was introduced.
 Instead of using the same temperature boundary for entering and leaving a state, separate thresholds were implemented. This creates a deliberate temperature gap between state transitions and prevents small fluctuations from immediately causing the system to switch back.
 The implemented transition boundaries were:
-Cold → Warm:  ≥ 23°C
-Warm → Cold:  < 22°C
-Warm → Hot:   ≥ 25°C
-Hot → Warm:   < 24°C
+
+- Cold → Warm:  ≥ 23°C
+- Warm → Cold:  < 22°C
+- Warm → Hot:   ≥ 25°C
+- Hot → Warm:   < 24°C
+- 
 This means that, for example, once the system enters the warm state, it must fall below 22°C before returning to cold. Similarly, once the system enters the hot state, it must fall below 24°C before returning to warm.
 Baseline Testing
 Before implementing the improved hysteresis behaviour, the original system was tested around the temperature thresholds.
@@ -142,7 +146,8 @@ The system was retested by deliberately heating and cooling the temperature sens
 **Hysteresis/Updated System** [Watch the video](https://youtube.com/shorts/4dBTJkXhDxE?feature=share)
 
 The improved system demonstrated smoother transitions between the cold, warm, and hot states, with the hysteresis preventing unwanted switching around the boundaries.
-Further Debugging
+
+# FURTHER DEBUGGING
 During subsequent testing, an additional difference was observed in the transition between the hot and warm states. The behaviour of the working transitions was compared with the problematic transition, and the relevant conditional boundary was identified.
 The hot-state condition was adjusted from a strict greater-than comparison to a greater-than-or-equal comparison. The system was then tested again, resulting in a smoother transition between the hot and warm states.
 This debugging process demonstrated the importance of testing individual conditions, comparing working and problematic behaviour, making targeted changes, and validating the physical result rather than assuming that a larger change to the program was necessary.
